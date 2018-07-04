@@ -1,0 +1,110 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Populaatiosimulaattori</title>
+	<link href="examples.css" rel="stylesheet" type="text/css">
+	<script language="javascript" type="text/javascript" src="jquery.js"></script>
+	<script language="javascript" type="text/javascript" src="jquery.flot.js"></script>
+	<script language="javascript" type="text/javascript" src="popsim.js"></script>
+	<script type="text/javascript" src="driver.js"></script>
+</head>
+<body>
+
+	<div id="header">
+		<h2>Populaatiosimulaattori</h2>
+	</div>
+	<div id="content">
+
+		<div>
+		  <button id="startbutton">Start</button> <a href="#ohjeet">Ohjeet täällä</a>
+		  <!-- <button id="pausecontinuebutton">Pause/continue</button> -->
+		  <p>Pentuemäärät: uros <input id="sireLitters" type="text" value="" style="text-align: right; max-width:3em">
+		    narttu <input id="damLitters" type="text" value="" style="text-align: right; max-width:3em"></p>
+		</div>
+		<div>
+		  Matadori 
+		  <input id="matadorInterval" type="text" value="" style="text-align: right; max-width:3em"> vuoden välein 
+		  <input id="matadorDuration" type="text" value="" style="text-align: right; max-width:3em"> vuoden ajan
+		  pentueita vuodessa <input id="matadorLittersPerYear" type="text" value="" style="text-align: right; max-width:3em">
+		</div>
+		<div id="extinctalleles" style="background-color: coral"></div>
+
+		<div class="demo-container">
+			<div id="placeholder" class="demo-placeholder"></div>
+		</div>
+		<div class="demo-container">
+			<div id="average-placeholder" class="demo-placeholder"></div>
+		</div>
+		<div><button id="resetbutton">Nollaa</button></div>
+
+		<div><a name="ohjeet"></a>
+		  <h2>Ohjeet</h2>
+		  <p>
+		    Tämän sivun avulla voit simuloida tuhannen koiran
+		    populaatiota, joka on samaa suuruusluokkaa kuin
+		    nykyinen partacollieiden määrä Suomessa.
+		  </p>
+		  <p>
+		    Simulaation aluksi luodaan tuhat eri-ikäistä koiraa, ja niille arvotaan haplotyypit 
+		    <a href="http://www.suomenpartacolliet.info/DLA_raporttiEnglish.pdf">monimuotoisuuskartoituksen</a>
+		    suhteiden mukaisesti. Sen jälkeen vuosittain
+		    poistetaan populaatiosta kymmenen vuotta täyttävät
+		    koirat, ja niiden tilalle arvotaan tarvittava
+		    määrä kahdeksan pennun pentueita niin että populaation
+		    koko pysyy suunnilleen samana.
+		    Pentujen haplotyypit määräytyvät vanhempien
+		    haplotyyppien perusteella. Jos isän haplotyyppi
+		    on <i>AB</i> ja emän haplotyyppi <i>CD</i>,niin
+		    pentueessa on
+		    haplotyyppejä <i>AC</i>, <i>AD</i>, <i>BC</i>
+		    ja <i>BD</i> jokaista kaksi kappaletta.
+		  </p>
+		  <p>
+		    Oletusrvoisesti parien valinta on täysin
+		    satunnaista, ainoa rajoite on että isän on oltava
+		    2-9 vuotta vanha ja emän 2-8 vuotta vanha. Jo
+		    lisääntyneitä yksilöitä voi suosia parituksissa
+		    muuttamalla pentuemääriä. Esimerkiksi jos uroksen
+		    pentuemäärä on kaksi, niin isäksi arvotulle
+		    urokselle tehdään myös toinen pentue.
+		  </p>
+		  <p>
+		    Simulaattorilla voi myös tarkastella
+		    matadoriuroksen vaikutusta. Parametrit kertovat
+		    kuinka monen vuoden välein valitaan uusi
+		    matadoriuros, kuinka monta vuotta sitä käytetään
+		    ja kuinka monta pentuetta sillä tehdään
+		    vuosittain.
+		  </p>
+		  <p>
+		    Ylempi kaavio kuvaa haplotyyppien suhteellisen
+		    määrän kehittymistä sadan vuoden ajan. Koska
+		    kunkin koiran haplotyyppi koostuu kahdesta osasta,
+		    on tuhannen koiran populaatiossa yhden haplotyypin
+		    maksimimäärä kaksituhatta.
+		  </p>
+		  <p>
+		    Alempi kaavio kuvaa haplotyyppien keskimääräistä
+		    lukumäärää vuosittain. Kaavio päivitetään jokaisen
+		    simulaation jälkeen, joten ajamalla useampia
+		    simulaatioita peräkkäin saa kuvan siitä, miten
+		    tietyt parametrit vaikuttavat
+		    monimuotoisuuteen. Keskiarvot saa nollattua
+		    kaavion alla olevalla napilla.
+		  </p>
+		  <p>
+		    Vaikka simulaatorin lähtödatana ovat haplotyypit,
+		    niin tulokset pätevät tietysti mille tahansa
+		    geneettiselle materiaalille.
+		  </p>
+		  <p></p>
+		</div>
+		<div>
+		  <hr>
+		  <p>Pertti Kellomäki 2014. Kysymykset ja kommentit osoitteeseen etunimi.sukunimi@iki.fi</p>
+		</div>
+	</div>
+
+</body>
+</html>

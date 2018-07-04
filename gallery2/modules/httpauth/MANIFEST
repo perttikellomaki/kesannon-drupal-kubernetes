@@ -1,0 +1,14 @@
+# $Revision: 16041 $
+# File crc32 crc32(crlf) size size(crlf)  or  R File
+modules/httpauth/FinishLogout.inc	2156036505	966970396	1881	1936
+modules/httpauth/HttpAuthSiteAdmin.inc	3697830463	1369225216	4487	4636
+modules/httpauth/HttpAuthWorks.inc	3564895414	1466378324	1466	1512
+modules/httpauth/TryLogout.inc	3164766767	3290117689	2220	2280
+modules/httpauth/classes/HttpAuthHelper.class	162822701	2194033938	11159	11528
+modules/httpauth/classes/HttpAuthInterface_1_0.class	3488205236	4221088165	2671	2739
+modules/httpauth/classes/HttpAuthPlugin.class	1941443290	2640491256	2506	2580
+modules/httpauth/classes/ServerAuthPlugin.class	488216817	668404850	2216	2282
+modules/httpauth/module.inc	600951025	794709240	11203	11600
+modules/httpauth/templates/FinishLogout.tpl	949127898	2170923270	524	537
+modules/httpauth/templates/HttpAuthSiteAdmin.tpl	2958560327	2568684607	8621	8769
+modules/httpauth/templates/TryLogout.tpl	4224264967	1712185247	836	861

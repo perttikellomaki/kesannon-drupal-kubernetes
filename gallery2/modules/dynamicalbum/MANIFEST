@@ -1,0 +1,8 @@
+# $Revision: 17277 $
+# File crc32 crc32(crlf) size size(crlf)  or  R File
+modules/dynamicalbum/DynamicAlbumSiteAdmin.inc	2594062574	2668382878	5545	5718
+modules/dynamicalbum/PopularAlbum.inc	785346627	791880885	1823	1876
+modules/dynamicalbum/RandomAlbum.inc	2171589473	2079263272	1761	1813
+modules/dynamicalbum/UpdatesAlbum.inc	1491356279	3447725886	7589	7840
+modules/dynamicalbum/module.inc	1198017548	2380729522	4937	5085
+modules/dynamicalbum/templates/DynamicAlbumSiteAdmin.tpl	36996583	3584269790	6853	7051

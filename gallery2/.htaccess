@@ -1,0 +1,30 @@
+# BEGIN Url Rewrite section
+# (Automatically generated.  Do not edit this section)
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    RewriteBase /gallery2/
+
+    RewriteCond %{REQUEST_FILENAME} -f [OR]
+    RewriteCond %{REQUEST_FILENAME} -d [OR]
+    RewriteCond %{REQUEST_FILENAME} gallery\_remote2\.php
+    RewriteCond %{REQUEST_URI} !/gallery2/main\.php$
+    RewriteRule .   -   [L]
+
+    RewriteCond %{REQUEST_METHOD} OPTIONS
+    RewriteRule .   /gallery2/modules/webdav/data/options/   [QSA,L]
+    RewriteCond %{THE_REQUEST} /gallery2/d/([0-9]+)-([0-9]+)/([^/?]+)(\?.|\ .)
+    RewriteCond %{REQUEST_URI} !/gallery2/main\.php$
+    RewriteRule .   /gallery2/main.php?g2_view=core.DownloadItem&g2_itemId=%1&g2_serialNumber=%2&g2_fileName=%3   [QSA,L]
+    RewriteCond %{THE_REQUEST} /gallery2/v/([^?]+)\.davmount(\?.|\ .)
+    RewriteCond %{REQUEST_URI} !/gallery2/main\.php$
+    RewriteRule .   /gallery2/main.php?g2_view=webdav.DownloadDavMount&g2_path=%1   [QSA,L]
+    RewriteCond %{THE_REQUEST} /gallery2/w(/[^?]*)?(\?.|\ .)
+    RewriteCond %{REQUEST_URI} !/gallery2/main\.php$
+    RewriteRule .   /gallery2/main.php?g2_controller=webdav.WebDav&g2_path=%1   [QSA,L]
+    RewriteCond %{THE_REQUEST} /gallery2/v/([^?]+)(\?.|\ .)
+    RewriteCond %{REQUEST_URI} !/gallery2/main\.php$
+    RewriteRule .   /gallery2/main.php?g2_path=%1   [QSA,L]
+</IfModule>
+
+# END Url Rewrite section
